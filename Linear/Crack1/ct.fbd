@@ -26,7 +26,7 @@ plus n origin g 8
 hcpy png Refs/sets
 
 # solver run
-sys ccx solve
+sys ccx_2.21_MT solve
 read solve.frd
 
 # symmetry expansion
