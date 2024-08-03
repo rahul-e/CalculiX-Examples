@@ -1,0 +1,14 @@
+read gmsh2.inp
+
+# remove all surface elements
+zap +CPS6
+
+send all abq
+
+send back abq nam 
+
+comp front do
+send front abq pres 1
+
+sys ccx_2.21_MT solve
+# read solve.frd

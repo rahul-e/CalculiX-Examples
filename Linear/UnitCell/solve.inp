@@ -1,0 +1,26 @@
+** Units - mm, tonne, sec, MPa
+*include,input=all.msh
+**include,input=Symy.nam
+*include,input=back.nam
+**include,input=origin.nam
+** symmetry at bottom
+*boundary
+Nback,1,3
+**NSymz,3
+**Norigin,1
+** material definition
+*material, name=steel
+*elastic
+210000,0.3,0
+*solid section, elset=Eall, material=steel
+*STEP
+*STATIC
+*dload
+*include,input=front.dlo
+*el file
+S
+*node file
+U
+*el print, elset=Eall, totals=only
+ELSE
+*end step
