@@ -10,7 +10,8 @@
 *density
 7.85e-9
 ** rectangular beam cross section
-*solid section, elset=Eall, material=steel
+*shell section, elset=Eall, material=steel
+5
 *STEP
 *STATIC
 *dload
